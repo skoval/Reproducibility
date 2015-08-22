@@ -1,0 +1,38 @@
+# A minimal R Markdown example
+
+A quote:
+
+> Markdown is not LaTeX.
+
+
+## Text
+
+Write text pretty much as usual with _some_ exceptions.
+
+
+## Code chunks
+
+Use the following tags to create a chunk of R code to be executed.
+
+```{r}
+x <- rnorm(1:5)
+x
+```
+
+Use options to control output like hiding code.
+
+```{r echo = FALSE}
+plot(1:10)
+```
+
+## Inline code
+
+You can insert code inline too. And you can call up objects that were created earlier in the document, just like in an R session. Here is the mean of the vector `x` `r mean(x)`. 
+
+## Math
+
+LaTeX like math notation is also possible.
+
+$$
+P(x) = \frac{1}{{\sigma \sqrt {2\pi } }}e^{- \left( {x - \mu } \right)^2 / 2\sigma^2 } 
+$$
