@@ -189,7 +189,7 @@ Source: [http://git.or.cz/](http://www.cheat-sheets.org/saved-copy/git-cheat-she
 
 ## Getting Started
 
-* You can work with [git](http://git-scm.com) on the command line
+* You can work with [Git](http://git-scm.com) on the command line
 
 * Or, use a GUI for [Windows](https://windows.github.com) or [Mac](https://mac.github.com)
 
@@ -223,7 +223,7 @@ Source: [http://git.or.cz/](http://www.cheat-sheets.org/saved-copy/git-cheat-she
 
 > * However, for internal projects, RAND's [Code Exchange](code-exchange.rand.org) is a service much like GitHub but more secure 
 
----
+--- .small
 
 
 ## Slidify
@@ -244,6 +244,8 @@ Source: [http://git.or.cz/](http://www.cheat-sheets.org/saved-copy/git-cheat-she
 ---
 
 ## Reference Material
+
+<br>
 
 * [Slide deck](http://skoval.github.io/Reproducibility/)
 
