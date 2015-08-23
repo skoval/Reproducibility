@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito);
+
+/* Styles for Title Slide */
+.title-slide hgroup > h1{
+  font-family: 'Nunito', sans-serif;
+}
+
+.title-slide hgroup > h2{
+  font-family: 'Nunito', sans-serif;
+}
+
+.title-slide p {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Fonts and Spacing */
+article p, article li, article li.build, section p, section li{
+  font-family: 'Nunito', sans-serif;
+  font-size: 32px;
+}
+
+slide.small p {
+  font-size: 24px;
+}
+
+slide:not(.segue) h2{
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Quotes and Shout (for io2012, custom) */
+article q {
+  font-family: 'Nunito', sans-serif;
+}
+
+ol li {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+slide.segue h2{
+  font-family: 'Nunito', sans-serif;
+}
+
+slide:not(.segue)  h2{
+  font-family: 'Nunito', sans-serif;
+}
+
+article p {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+.title-slide hgroup > h1{
+  font-family: 'Nunito', sans-serif;
+}
+

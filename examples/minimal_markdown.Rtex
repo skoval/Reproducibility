@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%% begin.rcode setup, include=FALSE
+% opts_chunk$set(fig.path='figure/latex-', cache.path='cache/latex-')
+%% end.rcode
+
+\begin{document}
+
+A minimal \LaTeX ~example
+
+\section{Text}
+
+Rendering text in the way that you want requires a bit more work but there is also much more {\large power} and \textcolor{red}{control}.
+
+\section{Code chunks}
+
+Use the following tags to create a chunk of R code to be executed.
+
+%% begin.rcode
+% x <- rnorm(1:5)
+% x
+%% end.rcode
+
+Use options to control output like hiding code.
+
+%% begin.rcode echo=FALSE
+plot(1:10)
+%% end.rcode
+
+\section{Inline code}
+
+You can insert code inline too. And you can call up objects that were created earlier in the document, just like in an R session. Here is the mean of the vector `x` \rinline{mean(x)}. 
+
+\section{Math}
+
+LaTeX like math notation is also possible.
+
+\begin{equation}
+P(x) = \frac{1}{{\sigma \sqrt {2\pi } }}e^{- \left( {x - \mu } \right)^2 / 2\sigma^2 } 
+\end{equation}
+
+\end{document}

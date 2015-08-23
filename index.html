@@ -13,7 +13,8 @@
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
   <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/css.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
 
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
@@ -33,8 +34,8 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>Reproducible Research with R</h1>
-    <h2></h2>
-    <p>Stephanie Kovalchik<br/>RAND Stat Group</p>
+    <h2>Made with slidify</h2>
+    <p>Stephanie Kovalchik<br/>RAND Statistics Group</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -66,8 +67,6 @@
     <img alt="Coombes and Baggerly" height='420' src='./assets/img/coombes_baggerly_nytimes.jpg' />
 </div>
 
-<p><br></p>
-
 <p>&quot;Keith Baggerly, left, and Kevin Coombes, statisticians at M. D. Anderson Cancer Center, <a href="http://www.nytimes.com/2011/07/08/health/research/08genes.html?_r=0">found flaws in research on tumors</a>.&quot; Credit: Michael Stravato for The New York Times</p>
 
   </article>
@@ -95,8 +94,8 @@
   <article data-timings="">
     <ol>
 <li><p>Get <a href="https://www.rstudio.com">RStudio</a></p></li>
-<li><p>Install knitr and rmarkdown packages</p></li>
-<li><p>Get git</p></li>
+<li><p>Install <code>knitr</code> and <code>rmarkdown</code> packages</p></li>
+<li><p>Get Git</p></li>
 </ol>
 
   </article>
@@ -122,13 +121,64 @@
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
+    <h2>R Markdown</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li><p>Dynamic documents in R start with an R Markdown file</p></li>
+<li><p>Markdown is a markup language with minimal syntax</p>
+
+<ul>
+<li>Easier than LaTeX</li>
+<li>Recognized by many rendering tools</li>
+<li>NOT exclusive to R</li>
+</ul></li>
+<li><p>R Markdown builds on markdown syntax but adds the ability to embed executable R code inline or as code chunks</p></li>
+<li><p>The <code>knit</code> function of knitr is used to produce a file with text, code, and results of code</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>R Markdown Resources</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<ul>
+<li><p><a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">Cheat sheet</a> - Workflow steps and basic features</p></li>
+<li><p><a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">Reference</a> - Details on syntax and chunk options</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Minimal Example: R Markdown</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<p>File available on <a href="https://github.com/skoval/Reproducibility/blob/master/examples/minimal_markdown.Rmd">github</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="small" id="slide-9" style="background:;">
+  <hgroup>
     <h2>The knitr Package</h2>
   </hgroup>
   <article data-timings="">
     
 <div style='float:left;width:48%;' class='centered'>
   <ul>
-<li><p><img alt="Yihui" height='80' src='./assets/img/yihui.jpg' /> Author R Ninja, Yihui Xe</p></li>
+<li><p><img alt="Yihui" height='80' src='./assets/img/yihui.jpg' /> Author and R Ninja, Yihui Xie</p></li>
 <li><p>Provides tools for creating dynamic documents</p></li>
 <li><p>Use to weave text and code in multiple languages</p></li>
 <li><p>Multiple input formats: Rnw, Markdown, HTML, LaTeX</p></li>
@@ -147,9 +197,194 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Knit in Console or RStudio?</h2>
+  </hgroup>
   <article data-timings="">
-    
+    <p>You can knit R Markdown files manually with <code>knit</code> or with RStudio&#39;s GUI. In other words, the following are equivalent:</p>
+
+<pre><code class="r">knit(&quot;minimal_example.Rmd&quot;)
+</code></pre>
+
+<p><br></p>
+
+<div style='text-align: center;'>
+    <img alt="knitr gui" height='320' src='./assets/img/knitr_gui.png' />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Knit in Console or RStudio?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li><p>If you want to use input other than R Markdown, you will want to use <code>knit</code> directly (i.e. on the command line).</p></li>
+<li><p>The advantage of <code>knitr</code> is that it provides more control and flexibility in document inputs</p></li>
+<li><p>This is often needed for creating publication-ready reports</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Minimal Example: R Latex</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>File available on <a href="https://github.com/skoval/Reproducibility/blob/master/examples/minimal_markdown.Rtex">github</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Version Control</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li><p><em>Version control</em> describes the process of tracking the history of a project&#39;s development so that developers can easily see changes made and revert to earlier versions</p></li>
+<li><p>Git is the most popular version control tool</p></li>
+<li><p><a href="https://github.com">Github</a> is a cloud service for sharing and collaborating on projects using Git </p></li>
+<li><p><img alt="Git" height='120' src='./assets/img/try_git.png' /> </p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Git Cheat Sheet</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style='text-align: center;'>
+    <img alt="Git Cheat Sheet" height='480' src='./assets/img/git_cheatsheet.png' />
+</div>
+
+<p>Source: <a href="http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf">http://git.or.cz/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="small" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Getting Started</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>You can work with <a href="http://git-scm.com">git</a> on the command line</p></li>
+<li><p>Or, use a GUI for <a href="https://windows.github.com">Windows</a> or <a href="https://mac.github.com">Mac</a></p></li>
+</ul>
+
+<table><thead>
+<tr>
+<th align="center">Term</th>
+<th align="center">What it Means</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="center">repo</td>
+<td align="center">The &quot;project&quot;, i.e. directory where Git project resides</td>
+</tr>
+<tr>
+<td align="center">commit</td>
+<td align="center">Saving changes to version history (NOT the same as saving files)</td>
+</tr>
+<tr>
+<td align="center">origin</td>
+<td align="center">Alias usually given to remote repo</td>
+</tr>
+<tr>
+<td align="center">master</td>
+<td align="center">Alias usually given to local repo</td>
+</tr>
+</tbody></table>
+
+<p><br></p>
+
+<table><thead>
+<tr>
+<th align="center">Command</th>
+<th align="center">What it Does</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="center">git init</td>
+<td align="center">Start a repo</td>
+</tr>
+<tr>
+<td align="center">git add</td>
+<td align="center">Add files to repo</td>
+</tr>
+<tr>
+<td align="center">git commit -m</td>
+<td align="center">Commit changes to history and add message</td>
+</tr>
+<tr>
+<td align="center">git push origin master</td>
+<td align="center">Push commits to remote alias</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="small" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>RAND Code Exchange</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style='text-align: center;'>
+    <img alt="code exchange" height='280' src='./assets/img/code_exchange.png' />
+</div>
+
+<ul class = "build incremental">
+<li><p>RAND&#39;s firewall prevents interacting with remote repos on GitHub </p></li>
+<li><p>This is a barrier when collaborating on projects with external researchers</p></li>
+<li><p>However, for internal projects, RAND&#39;s <a href="code-exchange.rand.org">Code Exchange</a> is a service much like GitHub but more secure </p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Slidify</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li><p>The great thing about learning and using markdown is that more and more interactive tools are using it</p></li>
+<li><p>One awesome example of this is <a href="http://slidify.org">slidify</a></p></li>
+<li><p>Slidify is a package by Ramnath Vaidyanathan that uses markdown-like documents to create HTML5 presentations</p></li>
+<li><p>If you can write markdown, you can get started with slidify pretty quickly</p></li>
+<li><p>This presentation is an <a href="https://github.com/skoval/Reproducibility/blob/master/index.Rmd">example</a></p></li>
+<li><p>RStudio&#39;s presentations are another option</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Reference Material</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p><a href="http://skoval.github.io/Reproducibility/">Slide deck</a></p></li>
+<li><p><a href="https://github.com/skoval/Reproducibility/">Source on github</a></p></li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -190,14 +425,80 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='The knitr Package'>
+        data-slide=6 title='R Markdown'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title=''>
+        data-slide=7 title='R Markdown Resources'>
          7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Minimal Example: R Markdown'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='The knitr Package'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Knit in Console or RStudio?'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Knit in Console or RStudio?'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Minimal Example: R Latex'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Version Control'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Git Cheat Sheet'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Getting Started'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='RAND Code Exchange'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Slidify'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Reference Material'>
+         18
       </a>
     </li>
   </ul>
