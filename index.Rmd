@@ -98,7 +98,7 @@ url:
 
 <br>
 
-File available on [github](https://github.com/skoval/Reproducibility/blob/master/examples/minimal_markdown.Rmd)
+File available on [GitHub](https://github.com/skoval/Reproducibility/blob/master/examples/minimal_markdown.Rmd)
 
 --- &twocol .small
 
@@ -156,7 +156,7 @@ knit("minimal_example.Rmd")
 ## Minimal Example: R Latex
 
 
-File available on [github](https://github.com/skoval/Reproducibility/blob/master/examples/minimal_markdown.Rtex)
+File available on [GitHub](https://github.com/skoval/Reproducibility/blob/master/examples/minimal_markdown.Rtex)
 
 
 ---
@@ -223,7 +223,6 @@ Source: [http://git.or.cz/](http://www.cheat-sheets.org/saved-copy/git-cheat-she
 > * However, for internal projects, RAND's [Code Exchange](code-exchange.rand.org) is a service much like GitHub but more secure 
 
 --- .small
-
 
 ## Slidify
 
